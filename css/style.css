@@ -1,15 +1,14 @@
-.grid{
-  display: flex;
-  width: 90%;
-  margin: 0 auto;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-img{
-    display: block;
-    flex-basis: 100%;
-    padding: 10px;
+* {
     box-sizing: border-box;
+  
+  }
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 200px);
+  grid-gap: 10px;
+
 }
 #search{
     width: 40%;
@@ -18,33 +17,11 @@ img{
     border-color: Grey;
     border-radius: 5px;
     margin: 4px auto;
-    display:flex;
+    display: flex;
 }
-.search-bar{
-    margin: 20px 0 20px 0;
-  
-
-}
-input{
-    padding-left: 10px;
- }
- input:focus{
-  box-shadow: 0 10px 50px 0 rgba(81, 203, 238, 1);
-}
-
-
-@media only screen and (min-width: 640px){
-    .grid{
-        flex-basis: 50%;
-    }
-}
-@media only screen and (min-width: 960px){
-    .grid{
-        flex-basis: 33.33%;
-    }
-}
-@media only screen and (min-width: 1280px){
-    .grid{
-        flex-basis: 20%;
-    }
+img{
+    display: block;
+    flex-basis: 100%;
+    padding: 10px;
+    box-sizing: border-box;
 }
