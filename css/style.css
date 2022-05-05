@@ -5,9 +5,11 @@
 
 .grid{
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 200px);
-  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, 200px);;
+  justify-content: center;
+  max-width: 875px;
+  grid-gap: 25px;
+  margin: 0 auto;
 
 }
 #search{
