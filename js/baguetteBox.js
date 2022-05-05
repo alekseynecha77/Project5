@@ -1,13 +1,11 @@
-// /*!
-//  * baguetteBox.js
-//  * @author  feimosi
-//  * @version 1.11.1
-//  * @url https://github.com/feimosi/baguetteBox.js
-//  */
+/*!
+ * baguetteBox.js
+ * @author  feimosi
+ * @version 1.11.1
+ * @url https://github.com/feimosi/baguetteBox.js
+ */
 
-// /* global define, module */
-
-
+/* global define, module */
 
 (function (root, factory) {
     'use strict';
@@ -793,6 +791,3 @@
         destroy: destroyPlugin
     };
 }));
-
-
-
