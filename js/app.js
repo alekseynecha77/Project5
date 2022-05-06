@@ -1,14 +1,23 @@
-function search_image() {
-    let input = document.getElementById('search').value
-    input=input.toLowerCase();
-    let x = document.getAttribute('img');
-      
-    for (i = 0; i < x.length; i++) { 
-        if (!x[i].innerHTML.toLowerCase().includes(input)) {
-            x[i].style.display="none";
-        }
-        else {
-            x[i].style.display="list-item";                 
-        }
-    }
-}
+baguetteBox.run('.gridContainer');
+
+let inputLog = document.getElementById("search");
+
+// (2)Add Event Listener (KeyUp)
+inputLog.addEventListener('keyup', searchImage);
+
+function searchImage() {
+    filterValue = document.getElementById("search").value.toLowerCase()
+
+    const anchors = document.querySelectorAll('a');
+
+    for (i = 0; i < anchors.length; i++) { 
+        let captions = anchors[i].getAttribute("data-caption").toLowerCase();
+        let filter = captions.includes(filterValue);//Includes() Returns True or False
+        
+        if (filter === true) {
+            anchors[i].style.display = 'block';
+          } else {
+              anchors[i].style.display = 'none';
+          };
+    };
+};
